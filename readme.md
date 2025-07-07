@@ -4,6 +4,13 @@ API or Application programming interface is like a connection between computer p
 ### What is FastAPI
 A python framework that allows us to build such APIs easily and optimized for high performance as it uses asynchronous servers, it also uses pydantic for validation and transformation of data internally and also uses stralette. It is intuitive, robust, short and fast to code. Because of the asynchronocity, the app can handle multiple sessions, multiple requests all at once.
 
+#### Steps to Run
+install fastapi: pip3 install fastapi
+install uvicorn(server): pip3 install uvicorn 
+to run the server: uvicorn working:app --reload (Doesn't work if env variables are not set)
+                OR
+                python -m uvicorn working:app --reload
+
 #### Starlette: ASGI
 ASGI, or Asynchronous Server Gateway Interface, is a specification for asynchronous web servers and applications in Python. It's designed to handle concurrent connections and real-time communication more efficiently 
 Starlette is a lightweight ASGI framework/toolkit, which is ideal for building async web services in Python.
