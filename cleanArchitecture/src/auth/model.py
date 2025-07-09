@@ -15,7 +15,7 @@ class Token(BaseModel):
 class TokenData(BaseModel):
     user_id: str | None = None
 
-    def get_uuid(self) -> Union[UUID, None]:
-        if self.user_id:
-            return UUID(self.user_id)
-        return None
+    def get_uuid(self) -> UUID:
+        if not self.user_id:
+            raise ValueError("Invalid or missing user_id in token")
+        return UUID(self.user_id)
